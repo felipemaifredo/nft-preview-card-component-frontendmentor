@@ -1,94 +1,43 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import nftImage from "@/nft-preview-card-component-main/images/image-equilibrium.jpg"
+import avatarImage from "@/nft-preview-card-component-main/images/image-avatar.png"
+import nftIcon from "@/nft-preview-card-component-main/images/icon-ethereum.svg"
+import clockIcon from "@/nft-preview-card-component-main/images/icon-clock.svg"
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <div className={styles.component}>
+        <Image 
+          className={styles.img}
+          src={nftImage}
         />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className={styles.content}>
+          <p className={styles.title}>Equilibrium #3429</p>
+          <p className={styles.description}>Our Equilibrium Collection promotes balance and calm.</p>
+          <div className={styles.priceandclockcontainer}>
+            <div className={styles.pricebox}>
+              <Image 
+                src={nftIcon}
+              />
+              <p>0.041ETH</p>
+            </div>
+            <div className={styles.clockbox}>
+              <Image 
+                src={clockIcon}
+              />
+              <p>3 days left</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.avatarbox}>
+          <Image
+            src={avatarImage} 
+          />
+          <p>Creation of <strong>Jules Wyvern</strong></p>
+        </div>
       </div>
     </main>
   );
