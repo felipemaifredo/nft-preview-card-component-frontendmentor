@@ -16,10 +16,44 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  transition: all .2s;
+  cursor: pointer;
 }
 
-.img {
+.component:hover {
+  transform: scale(1.02);
+}
+
+.imgcontainer {
   height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+.hiddenicon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -9;
+  border-radius: 10px;
+  background-color: #00fff793;
+  display: grid;
+  place-items: center;
+}
+
+.hiddenicon img{
+  height: 50px;
+  width: 50px;
+}
+
+.component:hover .hiddenicon {
+  z-index: 2;
+}
+
+.imgcontainer > img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -42,6 +76,14 @@
 
 .avatarbox p{
   font-size: .8rem;
+}
+
+.avatarbox p strong{
+  transition: all .2s;
+}
+
+.avatarbox p strong:hover{
+  color: #00fff8;
 }
 
 .content {
@@ -76,6 +118,11 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
+  transition: all .2s;
+}
+
+.title:hover {
+  color: #00fff8;
 }
 
 .description, .clockbox p{

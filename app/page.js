@@ -4,28 +4,35 @@ import nftImage from "@/nft-preview-card-component-main/images/image-equilibrium
 import avatarImage from "@/nft-preview-card-component-main/images/image-avatar.png"
 import nftIcon from "@/nft-preview-card-component-main/images/icon-ethereum.svg"
 import clockIcon from "@/nft-preview-card-component-main/images/icon-clock.svg"
+import viewIcon from "@/nft-preview-card-component-main/images/icon-view.svg"
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.component}>
-        <Image 
-          className={styles.img}
-          src={nftImage}
-        />
-
+        <div className={styles.imgcontainer}>
+          <Image
+            className={styles.img}
+            src={nftImage}
+          />
+          <div className={styles.hiddenicon}>
+            <Image
+              src={viewIcon}
+            />
+          </div>
+        </div>
         <div className={styles.content}>
           <p className={styles.title}>Equilibrium #3429</p>
           <p className={styles.description}>Our Equilibrium Collection promotes balance and calm.</p>
           <div className={styles.priceandclockcontainer}>
             <div className={styles.pricebox}>
-              <Image 
+              <Image
                 src={nftIcon}
               />
               <p>0.041ETH</p>
             </div>
             <div className={styles.clockbox}>
-              <Image 
+              <Image
                 src={clockIcon}
               />
               <p>3 days left</p>
@@ -34,7 +41,7 @@ export default function Home() {
         </div>
         <div className={styles.avatarbox}>
           <Image
-            src={avatarImage} 
+            src={avatarImage}
           />
           <p>Creation of <strong>Jules Wyvern</strong></p>
         </div>
